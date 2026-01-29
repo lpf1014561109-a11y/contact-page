@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>填写信息（中文）</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;padding:18px;line-height:1.5}
+    .wrap{max-width:520px;margin:0 auto}
+    .card{border:1px solid #ddd;border-radius:14px;padding:16px}
+    img{width:100%;height:auto;border-radius:12px;margin-bottom:12px}
+    label{display:block;margin:12px 0 6px;font-weight:700}
+    input{width:100%;padding:12px;border:1px solid #bbb;border-radius:12px;font-size:16px;box-sizing:border-box}
+    .hint{color:#555;font-size:12px;margin-top:6px}
+    button{width:100%;margin-top:14px;padding:12px;border-radius:12px;border:1px solid #111;background:#111;color:#fff;font-weight:800;font-size:16px}
+    a{color:inherit}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <img src="image.webp" alt="说明图片">
+      <div class="hint">请填写以下信息，我们将尽快与您联系。您提供的信息仅用于联系用途。</div>
+
+      <label>姓名</label>
+      <input id="name" placeholder="请输入姓名" autocomplete="name">
+
+      <label>联系方式</label>
+      <input id="contact" placeholder="微信 / LINE / 电话 / 邮箱" autocomplete="tel">
+
+      <button id="go">提交信息</button>
+      <div class="hint" style="margin-top:10px">
+        提交后将跳转到登记表单完成保存。
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 把下面这个链接换成你的 Google 表单“填写链接”
+    const FORM_URL = "把你的Google表单填写链接粘贴到这里";
+
+    document.getElementById("go").addEventListener("click", () => {
+      const name = document.getElementById("name").value.trim();
+      const contact = document.getElementById("contact").value.trim();
+      if(!name || !contact){
+        alert("请填写姓名和联系方式。");
+        return;
+      }
+      // 先跳转到表单（最稳）
+      window.location.href = FORM_URL;
+    });
+  </script>
+</body>
+</html>
