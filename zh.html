@@ -12,30 +12,25 @@
     label{display:block;margin:12px 0 6px;font-weight:700}
     input{width:100%;padding:12px;border:1px solid #bbb;border-radius:12px;font-size:16px;box-sizing:border-box}
     .hint{color:#555;font-size:12px;margin-top:6px}
-    button{width:100%;margin-top:14px;padding:12px;border-radius:12px;border:1px solid #111;background:#111;color:#fff;font-weight:800;font-size:16px}
-    a{color:inherit}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <img src="image.webp" alt="说明图片">
-      <div class="hint">请填写以下信息，我们将尽快与您联系。您提供的信息仅用于联系用途。</div>
+    <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSdCAgSQrKZJmkAuRqmNXlrGZLFaYy_uPez_aw4iShecTchlFw/viewform?usp=header"
+  style="
+    display:block;
+    margin-top:14px;
+    padding:12px;
+    text-align:center;
+    border-radius:12px;
+    border:1px solid #111;
+    background:#111;
+    color:#fff;
+    font-weight:800;
+    font-size:16px;
+    text-decoration:none;
+  "
+>
+  提交信息
+</a>
 
-      <label>姓名</label>
-      <input id="name" placeholder="请输入姓名" autocomplete="name">
-
-      <label>联系方式</label>
-      <input id="contact" placeholder="微信 / LINE / 电话 / 邮箱" autocomplete="tel">
-
-      <button id="go" type="button">提交信息</button>
-      <div class="hint" style="margin-top:10px">
-        提交后将跳转到登记表单完成保存。
-      </div>
-    </div>
-  </div>
-
- <script>
   const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdCAgSQrKZJmkAuRqmNXlrGZLFaYy_uPez_aw4iShecTchlFw/viewform?usp=header";
 
   document.getElementById("go").addEventListener("click", () => {
